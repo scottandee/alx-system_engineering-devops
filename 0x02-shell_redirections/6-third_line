@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -f 3 iacta
+grep die iacta
