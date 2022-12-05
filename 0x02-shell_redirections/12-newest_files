@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(ls -t)"
+ls -t > Andee | head Andee | cat Andee
