@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This scipt prints 'To infinity and beyond' indefinitely
+# It'll sleep for 2 seconds in each iteration
+
+i=true
+while $i
+do
+  echo 'To infinity and beyond'
+  sleep 2
+done
