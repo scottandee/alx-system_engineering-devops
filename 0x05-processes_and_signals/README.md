@@ -12,4 +12,4 @@ The commands used were
 * trap
 * signal
 
-For more information on these commands above you can check the **man** or **help** page
+For more information on these commands above, you can check the **man** or **help** page
