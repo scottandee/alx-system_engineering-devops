@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 # This bash sript displays the content of the directory
 # in list format and prints out only the part that contains the name
-
-touch list
-ls > 
-for i in $(ls -d *) 
+ 
+for i in $(ls) 
 do
-  cut --complement -d "-" -f 1 i 
+  echo $i | cut --complement -d "-" -f 1
 done
