@@ -1,0 +1,26 @@
+https://drive.google.com/file/d/1gLO9djmA-9kQxZ4CVuxGzv5JlWYGXKa0/view?usp=sharing
+
+For every additional element, why are you adding it?
+Firewalls are needed in the design to filter out all unwanted network traffic. A SSL certificate is needed for a secure connection between the client and the server. The monitoring is needed to monitor each of our servers metrics in case of failure.
+
+What are Firewalls for?
+Firewalls are mainly used to filter out unwanted network traffic and allow our desired traffic. Firewalls can either be software or hardware. The software firewalls are usually installed on a host computer while the hardware firewall acts as a gateway between the network and your components. A host firewall is what is implemented in this design
+
+Why is the traffic served over HTTPS?
+Traffic is served over HTTPS because data that is shared is passed in an encrypted format unlike HTTP
+
+What is monitoring used for?
+Monitoring is a tool used to watch the metrics of our computer/server. This will notify the owner if anything unusual is going on with the server
+
+Server monitoring tools track server activity by streaming event logs, also known as log files, which the server generates automatically.
+
+There are several tools available to help monitor web server QPS, including open source solutions, commercial products, cloud-based solutions, log analysis tools, network monitoring tools, and application performance monitoring tools
+
+Issues with this design
+Terminating the SSL at the load balancer can create a SPOF at that point in the case of any form if failure
+
+Having only one SQL server that accept writes is an issue because in the case where there's a lot of traffic that needs to be written, it'll
+slow down the speed of response at client ends
+
+Having all the components in the same server makes the information of you client prone to theft. In cases that your webserver is penetrated,
+the intruder will have direct access to your database
