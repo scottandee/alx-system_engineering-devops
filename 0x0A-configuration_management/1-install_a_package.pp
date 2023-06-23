@@ -1,4 +1,4 @@
-# This script installs a particular
+# This manifest installs a particular
 # version of flask when run
 
 package{'flask':
