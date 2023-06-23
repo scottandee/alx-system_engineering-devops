@@ -1,0 +1,20 @@
+https://drive.google.com/file/d/1BvBxOJRaflvnkcCkVZ0bidEZ0dj0-XsI/view?usp=sharing
+
+aFor every additional element, why are you adding it?
+first, were to add two new servers. The first will be used as a container for the load balancer and the second will be an additional server that'll host another app server, web server, codbase and database replica. The load balancer is an important component for horizontal scaling. The new server and it's components eliminate the SPOFs that we had in our design in task 0.
+
+What distribution algorithm your load balancer is configured with and how it works
+
+The load balancer is running a round robin distribution algorithm. In this algorithm, load is distributed to each server equally. Load is distributed one at a time to every available server and after this, it'll go back to the first server that it distributed to and then continue till the last one.
+
+Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+
+The load balancer is enabling and active active configuration in my design. In the active-active configuration, all available servers are working and receiving load that is passed to it by the load balancer. In the active-passive configuration, one of the servers will be on standby in case of a failure or damage to the working server
+
+How a database Primary-Replica (Master-Slave) cluster works
+In a master slave cluster, the read and write permissions are given to the master and the read permission is given to the replica. both databases will contain the exact same thing. Updating the database will be from the master. It can be done in two ways, asynchronously and synchronously. Syn
+
+What are the issues with this infrastructure?
+The SPOF in this infrastructure is the load balancer. The load balancer has to replica and in case of failure will cause the entire system to go down
+Security Issues: no firewall, SSL certificate
+No monitoring

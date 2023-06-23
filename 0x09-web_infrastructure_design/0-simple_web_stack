@@ -1,0 +1,28 @@
+https://drive.google.com/file/d/1a6JCWSrIjOWoOzqdQhFa0gmj2dsnNK6o/view?usp=share_link
+
+What is a server?
+A server is a computer. It can be either hardware or software. It's main purpose is to provide functionality/services to the clients
+
+What is Domain name?
+This is a text that can be usually translated into an IP address. Normally, computers understand IP addresses but as for humans, it's pretty easy to forget. Hence, the need for the domain name. Each domain name is also unique like the IP address
+
+What type of DNS record www is in www.foobar.com?
+This is the A record. The A record maps an address to it's corresponding IP address.
+
+What is the role of the webserver?
+The webserver is of two parts, the hardware and the software. The software part is the one that follows the HTTP protocol and receives and responds to HTTP requests. The hardware part is for storage of web server software and static web pages. The web server when it gets requests, interact with it's storage which is the Codebase to retrieve static pages. If business logic is needed, it'll send a serverlet to the application server
+
+What is the role of the application server?
+The application server's main purpose is the provide business logic so as to create dynamic webpages. It interacts with the database to retrieve specific information.
+Business Logic is simply the programming that manages communication between the end user and the database.
+
+What is the role of the database?
+Database is an organized collection of data. Most times data in databases are stored in tables. This is known as relational database. The database just serves the role of preserving and storing the data of the users  of www.foobar.com
+
+What is the computer using to communicate with the computer of the user requesting the webpage?
+HTTP
+
+What are the Issues in this design?
+SPOFs occur when there no other replacement (stand by or active) for a particular component in our design. In this design, the web server, app server, database and codebase are all SPOFs.  If any one of them fail, the server will not be able to function properly
+Downtime is the period of time in which our server is not running for. There's unplanned and planned downtime. Each of these types cannot e avoided because there's only one of each major component.
+In the case of large incoming traffic, scaling is impossible. This is because there's no component to split the load amongst any additional server that will be added for a scale out
