@@ -1,4 +1,4 @@
-# This script creates a file with name 'school'
+# This manifest creates a file with name 'school'
 # in the /tmp directory
 
 
