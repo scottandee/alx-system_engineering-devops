@@ -4,6 +4,6 @@
 replace="server_name _;\n\treturn 301 $scheme:https//www.youtube.com/watch?v=QH2-TGUlwu4$request_uri;"
 
 sudo apt-get update
-sudo apt-get install nginx
+sudo apt-get -y install nginx
 sudo sed -i "s|server_name _;|$replace|" /etc/nginx/sites-available/default
 service nginx restart
