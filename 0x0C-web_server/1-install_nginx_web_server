@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This script installs and configures nginx
 # on a machine when run
-sudo apt install nginx -y
-sudo echo "Hello World!" > /var/www/html/index.html
+apt-get install nginx -y
+echo "Hello World!" > /var/www/html/index.html
 service nginx restart
