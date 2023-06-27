@@ -3,4 +3,4 @@
 # on a machine when run
 sudo apt install nginx -y
 echo "Hello World!" > /var/www/html/index.html
-service nginx restart
+sudo service nginx restart
