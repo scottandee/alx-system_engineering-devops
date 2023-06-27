@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script conntains commands to configure
-# an unbuntu machine with a redirection
-replace="server_name _;\n\treturn 301 $scheme:https//www.youtube.com/watch?v=QH2-TGUlwu4$request_uri;"
+# an ubuntu machine with a redirection
+replace="server_name _;\n\treturn 301 https//www.youtube.com/watch?v=QH2-TGUlwu4;"
 
 sudo apt-get update
 sudo apt-get -y install nginx
