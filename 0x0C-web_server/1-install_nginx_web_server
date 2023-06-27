@@ -2,5 +2,5 @@
 # This script installs and configures nginx
 # on a machine when run
 sudo apt-get -y install nginx
-sudo echo "Hello World!" > /var/www/html/index.html
-sudo service nginx start
+echo "Hello World!" > /var/www/html/index.html
+service nginx start
