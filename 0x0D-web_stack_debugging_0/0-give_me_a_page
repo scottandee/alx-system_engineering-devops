@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Fix bug in webstack
+service apache2 restart
