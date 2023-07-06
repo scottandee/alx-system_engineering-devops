@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script fixes the broken webstack
+sudo rm -r /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/ /etc/nginx/sites-enabled
+sudo service nginx restart
