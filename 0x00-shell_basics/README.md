@@ -46,15 +46,19 @@ This is actually called a terminal emulator. The terminal serves as the interfac
   *  `/etc` : this contains the configuration files for the system. (/etc/passwd for passwords, /etc/hosts for ip and hostnames config)
   *  `/bin` : binary files dir. Contains program executables
   *  `/usr/bin` : apps for the system user
-  *  `/sbin`, `/usr/sbin` :
-  *  `/usr` :
-  *  `/var` :
-  *  `/lib` :
-  *  `/tmp` :
-  *  `/dev` :
-  *  `/media` :
-  *  `/proc` :
+  *  `/sbin`, `/usr/sbin` : programs sor system administrator or superuser
+  *  `/usr` : This consists of a set of programs that supports the users applications
+  *  `/var` : This consists of files that change as the machine is running (`/var/log`, te systems log files)
+  *  `/lib` : This consists of shared libraries
+  *  `/root`: This is the superusers home directory
+  *  `/tmp` : This is a place where program can write their temporary files to
+  *  `/dev` : This is where we can view devices that are connected to your machine
+  *  `/media` : auto-mounting of usb files
+  *  `/proc` : This shows information on current processes
 
 
 ## Note
 * `~` on the command line refers to the home directory
+
+## Author
+Olayinkascott Andee (andeeolayinkascott@gmail.com)
