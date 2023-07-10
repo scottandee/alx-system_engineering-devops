@@ -2,7 +2,7 @@
 In this project, we go over basic shell commands for navigation, looking around, manipulating files and working with commands
 
 ## What is the Shell?
-The shell is a tool that acts as an intermediary in between the keyboard and the OS. It's main function is to interpret the commands we enter into our **terminal** to the OS
+The shell is a tool that acts as an intermediary in between the keyboard and the OS. It's main function is to interpret the commands we enter into our **terminal** to the OS, execute programs and handle various other shell operations
 ## What is a Terminal?
 This is actually called a terminal emulator. The terminal serves as the interface for the shell
 
