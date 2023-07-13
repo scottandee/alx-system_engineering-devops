@@ -76,9 +76,31 @@ Local variables are variables that are only avaliable to the current running she
 6. `$0` : Name if the shell script
 
 ## Shell Init Files
+In linux, there are two major classifications of shell initialization files. They are:
+1. System profile files
+2. User profile files
+
+### What are System Profile Files?
+Sytem profile files are files that permanently set the variables, functions and aliases globally for the entire system. Simply, they set environment variables.
+These files are usually run when a user logs in.
+
+* **/etc/profile**: This file is used to set environment variables, functions and aliases globally for the entire system. This file also contains references to other files (e.g /etc/inputrc, /etc/profile.d). This file belongs to the root user and can only be edited by the root user. On machines that can run multiple shells, this file is sourced by the different shell programs. This is the reason why shell specific configurations are not put in this file but in some other files
+
+* **/etc/bashrc**: This file contains shell specific system profle configurations. It sets the variables, fuctions and aliases globally for a specific shell
+
+### What are User Profile files
+These are files that set the functions, variables and aliases for each user. These files are usually copied from the **/etc/skel/** directory. The user profile files are usually contained in the user home directory. Once these files are edited/appended, changes will be enabled only after the user logs out and logs back in hence, emphasizing the *"initialization"* file purpose
+
+* **~/.bash_profile**: This file is usually run as a user logs in. It is the preferred file for setting user configurations
+* **~/.bash_login**: This file contains configurations that are usually executed when you log in to your machine
+* **~/.profile**: In the absence of **~/.bash_login** and **~/.bash_profile**, this file is usually sourced
+* **~/.bashrc**: This is used to configure the bahaviour of a bash shell for a specific user. It is usually read as the user logs in interactively. This file usually references the **/etc/bashrc** file
+* **~/.bash_logout**: This contains specific instructions about the logout procedure
+* **~/.bash_history**: This contains the command line history of the user
+
 
 ## `alias` Command
-This is used to give another name to a particular command. This is usually temporary but can be made permanent by setting it in the ~/bashrc file
+This is used to give another name to a particular command. This is usually temporary but can be made permanent by setting it in the **~/.bashrc** file
 
 To set an alias:
 ```bash
@@ -108,4 +130,4 @@ printf "Name: %s\n" $NAME
 ```
 
 ## AUTHOR
-* Olayinkascott Andee (andeeolayinkscott@gmail.com)
+* Olayinkascott Andee (andeeolayinkascott@gmail.com)
