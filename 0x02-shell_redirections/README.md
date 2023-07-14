@@ -2,9 +2,30 @@
 Normally, the results to the commands we enter into the terminal is displayed on the standard output. We can redirect that output into a file, another command or even to the standard error. Filters are commands that help to remove unwanted parts of the results we get from the shell.
 ## What is the Standard Input?
 This is a place where commands take their input. This is usually the keyboard but can be redirected to come from various other forms. It's referred to as the **stdin**
+Here, we're sending the lines of the file as input to a command
+
 ```bash
 sort < file.txt
 ```
+
+We can also create a *here-document* with the `<<` redirection. This allows us to specify multiple lines of input directly within a script or command without the need for a separate input document
+
+```bash
+command << EOF
+line 1
+line 2
+line 3
+EOF
+```
+
+**NOTE**: The lines between EOF and EOF will be passed as input to the command. You can use any other marker, it just has to be uniform at the beginning and at the end
+
+Additionally, we can create a *here-string* with the `<<<` redirection. This is is used to pass a single string as an input to a command. Its the shorthand for echoing a string and redirecting it as input
+
+```bash
+command <<< "input_string"
+```
+
 ## What is the Standard Output?
 This is a place where commands display their output. This can also be rediirected. It's referred to as the **stdout**
 ```bash
@@ -40,12 +61,13 @@ Pipelines serve the purpose of passing the output of one command as the inout of
 2. `wc` : This counts words, lines or characters
 3. `cat` : This concatenates and displays two files
     If no command is passed, cat reads from stdin
+   
     ```bash
     cat > file.txt
     cat >> file.txt
     ```
-4. `rev` : Reverse words
-5. `cut` : Trim output. For more click [here](https://www.geeksforgeeks.org/cut-command-linux-examples/#:~:text=The%20cut%20command%20in%20UNIX,line%20and%20extracts%20the%20text.)
+5. `rev` : Reverse words
+6. `cut` : Trim output. For more click [here](https://www.geeksforgeeks.org/cut-command-linux-examples/#:~:text=The%20cut%20command%20in%20UNIX,line%20and%20extracts%20the%20text.)
 
 ## Special Characters
 [click here](http://mywiki.wooledge.org/BashGuide/SpecialCharacters)
