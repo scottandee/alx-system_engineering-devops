@@ -2,7 +2,7 @@
 # This bash sript displays the content of the directory
 # in list format and prints out only the part that contains the name
  
-for i in $(echo *) 
+for i in $(echo ./*) 
 do
   echo "$i" | cut --complement -d "-" -f 1
 done
