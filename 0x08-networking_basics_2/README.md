@@ -8,7 +8,7 @@ This is a computers loopback address. It has the entire 127.0.0.0/8 block reserv
 This is any device that is connected to a computer network
 
 ### What is a Host
-This signifies any device or computer that has a unnique address ion a computer network
+This signifies any device or computer that has a unique address on a computer network
 
 ##  0.0.0.0
 This address serves the purpose of indicating a "wildcard" or "unspecified" address. Some uses are to bind to all avaliable network interfaces, indicate default route, network configuration, address initialization, Network mask representation, socket binding etc.
@@ -17,6 +17,7 @@ This address serves the purpose of indicating a "wildcard" or "unspecified" addr
 The purpose of this file is for address-name translation. When you type a web address into your browser, your browser will first look into the `/etc/hosts` file to confirm if that address is present in the file before it then consults the DNS. The file contains name and Ip addresses which are usually separated by tabs.
 
 ## The `nc` command
+This command can do about anything involving TCP, UDP and UNIX-domain sockets. It can be used to send packets, open TCP connections, send UDP packets, do port scanning and many more
 
 ## The `ifconfig` command
 This is short for interface configuration. It is used to view and configure network interfaces on the UNIX like OS. Some of the uses are
@@ -24,3 +25,6 @@ This is short for interface configuration. It is used to view and configure netw
 2. Activating and deactivating interfaces `ifconfig interface_name up` or `ifconfig interface_name up`
 3. Setting IP addresses `ifconfig interface_name ip_address netmask subnet_mask`
 4. Changing maximum transmission unit `ifconfig interface_name mtu new_mtu_value`
+
+## AUTHOR
+* Olayinkascott Andee(andeeolayinkascott@gmail.com)
