@@ -42,6 +42,9 @@ A firewall is used to monitor all **incoming** and **outgoing** traffic. The fir
 ## SSL
 An ssl certificate enables encryption of communication in between your server and a client
 
+## Load Balancer
+This is used to distribute the workload of your system to several other individual systems in order to reduce the workload on a particular system. This increases efficiency, ensures reliability and avaliability of your enterprise. Some load balancing algoriths are round-robin, least-connection, weighted scheduling algorithm.
+
 **Note**
 * Scale up: Increase server specifications
 * Scale out: Adding more Servers
