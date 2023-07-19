@@ -4,7 +4,7 @@ Configuration Management is the art of systematically handling changes to a file
 ## Benefits of Configuration Management
 1. Quick provisioning of new servers
 2. Quick recovery from critical events
-3. No more Snowflake servers i.e servers that were configured manually and cant be replicated
+3. No more Snowflake servers i.e servers that were configured manually and can't be replicated
 4. Version control for server environments
 5. Replicated Environoments
 
@@ -26,20 +26,28 @@ resource_type { 'resource_name':
 ## Some Puppet Basics
 1. **Variables**: Varaiables can be used when writing puppet code. It will have to be predeclared before use
    
-    ```bash
-    $text = "Hello"
+   ```bash
+   $text = "Hello"
 
-    file { '/tmp/test':
-            content => $text
-            mode    => '0644'
-    }
-    ```
+   file { '/tmp/test':
+         content => $text
+         mode    => '0644'
+   }
+   ```
 2. **Loops**: To do this, well have to create a variable which contains an array
 
-    ```bash
-    $packages = ['nginx', 'mysql-server']
+   ```bash
+   $packages = ['nginx', 'mysql-server']
 
-    package { $packages:
-            ensure => installed
-    }
-    ```
+   package { $packages:
+         ensure => installed
+   }
+   ```
+3. **Conditionals**: These are used to make decisions in manifest declaration
+
+   ```bash
+   exec { 'Kill me now':
+         command => pkill -f -9 killmenow
+         onlyif  => 'pkill -f killmenow'
+   }      
+   ```
