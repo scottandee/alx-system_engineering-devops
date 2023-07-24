@@ -44,6 +44,20 @@ server {
 
 Refer to [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04) for more information on this.
 
+## Some Common Nginx Server Block Directives
+1. `server`: The main block that defines a virtual server configuration. Each server block corresponds to a specific domain name or IP address.
+2. `listen`: Specifies the IP address and port on which Nginx should listen for incoming requests. For example, listen 80; for HTTP on port 80 or listen 443 ssl; for HTTPS on port 443.
+3. `server_name` Defines the domain name(s) associated with the server block. Nginx will use this directive to match the incoming request's Host header to determine which server block to use for handling the request.
+4. `root`: Sets the document root directory for the server. It specifies the location from which Nginx will serve files for the corresponding server block.
+5. `index`: Defines the default file to be served when a directory is requested. For example, index index.html index.php; specifies that Nginx should look for "index.html" or "index.php" in the specified root directory.
+6. `location`: This directive is used within a server block to define how Nginx should handle requests for specific URLs or URI patterns. It allows you to set various directives to customize the behavior for specific locations.
+7. `try_files`: Specifies a list of files or URIs to try in sequence to fulfill a request. It's often used in conjunction with the location directive to handle different file types or fallback options.
+8. `proxy_pass`: Used for proxying requests to a backend server or upstream. This directive allows Nginx to act as a reverse proxy, passing requests to an application server (e.g., Apache, Node.js, etc.).
+9. `ssl`: Enables SSL/TLS support for secure HTTPS connections. It is used in conjunction with SSL-related directives, such as ssl_certificate and ssl_certificate_key, to configure SSL settings.
+10. `error_page`: Defines custom error pages for specific HTTP status codes. You can specify custom error pages to provide more informative and user-friendly error messages to visitors.
+11. `location`: Allows you to define how Nginx handles requests for specific URLs or URI patterns. It is a powerful directive for fine-tuning the behavior of Nginx based on the requested URI.
+12. `return`: The return directive can be used to specify a custom HTTP response and optionally perform a redirect to a different url
+
 ## What is Root Domain Name, Subdomain?
 A Root Domain is a particular A record that translates to a particutar IP address. A domain name consists of a second level domain, a dot and a top level domain.
 The Subdomain usually comes before the main domain. It can be used to create separate sections of a website, point to specific server or services or organizing resources in a more structured manner. For example, `blog.test.com` for the blog, `www.test.com` for the webserver itself, `mail.test.com` for the websites mail. Subdomains are usually set up by configuring the DNS records of your domain name.
