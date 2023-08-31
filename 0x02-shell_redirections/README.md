@@ -17,6 +17,7 @@ line 2
 line 3
 EOF
 ```
+One major difference between the here-string and the here document is that the here string is read by the shell as one string rather than multiple lines of input
 
 **NOTE**: The lines between EOF and EOF will be passed as input to the command. You can use any other marker, it just has to be uniform at the beginning and at the end
 
@@ -24,6 +25,13 @@ Additionally, we can create a *here-string* with the `<<<` redirection. This is 
 
 ```bash
 command <<< "input_string"
+```
+A here string can also can also be used in the form of an opening and closing single quote. It allows us the ability to specify a multiline input to a particular command like the previous methods we've described in this section.
+
+```bash
+command 'line 1
+line 2
+line 3'
 ```
 
 ## What is the Standard Output?
@@ -40,7 +48,7 @@ Stdin from file.txt, stdout to sorted.txt:
 sort < file.txt > sorted.txt
 ```
 ### What are Pipelines Used for?
-Pipelines serve the purpose of passing the output of one command as the inout of another command
+Pipelines serve the purpose of passing the output of one command as the input of another command
 
 ## Shell Filters
 1. `sort` : This takes in input from the stdin and outputs the sorted output to stdout
