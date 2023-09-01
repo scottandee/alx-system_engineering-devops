@@ -4,7 +4,7 @@
 Expansions are the series of processes that are performed on commands that are entered into the terminal. This expansion is usualy done by the shell
 
 ### Types of Expansion
-1. Pathname Expansion : This expands [wildcards]()
+1. Pathname Expansion : This expands [wildcards](http://mywiki.wooledge.org/BashGuide/SpecialCharacters)
 3. Tilde Expansion(~) : This expands to the home directory
 4. Arithmetic Expansion : This performs arithmetic by expansion
    
@@ -62,7 +62,7 @@ Local variables are variables that are only avaliable to the current running she
 
 ### Useful Commands
 1. `set` : To list out all local and environment variables if no arguments are passed. If a parameter and value is passed it is set locally
-2. `unset` : This is used to remove a variable from ecistense
+2. `unset` : This is used to remove a variable from existence
 3. `readonly` : this is used  to specify a rule that one set, it cannot be reassigned
 4. `export` : This is used to make a local variable an environment variable. It can be done on one line.
 
@@ -114,8 +114,8 @@ unalias alias_name
 The source and dot commands are used to execute command from a file in the current shell. Both commands perform the same action. One of them is just the shorthand.
 
 ```bash
-$ source /path/to script
-$ . /path/to script
+$ source /path/to_script
+$ . /path/to_script
 ```
 
 ## `printf`
