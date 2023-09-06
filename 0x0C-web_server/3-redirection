@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # This script conntains commands to configure
 # an ubuntu machine with a redirection
-replace="server_name _;\n\treturn 301 https//www.youtube.com/watch?v=QH2-TGUlwu4;"
+replace="server_name _;\n\tlocation /redirect_me/ {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
 
 sudo apt-get update
 sudo apt-get -y install nginx
 sudo sed -i "s|server_name _;|$replace|" /etc/nginx/sites-available/default
-service nginx restart
+sudo service nginx restart
