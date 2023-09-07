@@ -2,8 +2,8 @@
 # This script configures a server and
 # adds a HTTP response header
 hostname=$(hostname)
-header="location / {\n\t\tadd_header X-Served-By $hostname;"
+header="server_name _;\n\tadd_header X-Served-By $hostname;"
 sudo apt-get update
 sudo apt-get -y install nginx
-sudo sed -i "s|location / {|$header|1" /etc/nginx/sites-available/default
+sudo sed -i "s|server_name _;|$header|1" /etc/nginx/sites-available/default
 sudo service nginx restart
