@@ -11,12 +11,18 @@ function record(){
 	echo "$(dig "$domain" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -F ' ' '{print $4}')"
 }
 
-if [ "$2" ]
+if [ "$#" -gt 1 ]
 then
-	domain="$2.$1"
-	ip=$(ip "$domain")
-	record=$(record "$domain")
-	printf "The subdomain %s is a %s that points to %s\n" "$2" "$record" "$ip"
+	i=1
+	subdomain=""
+	for arg in "$@"
+	do
+		if [ "$i" -eq 1 ]; then subdomain=$arg; ((i++)); continue; fi	
+		domain="$arg.$subdomain"
+		ip=$(ip "$domain")
+		record=$(record "$domain")
+		printf "The subdomain %s is a %s that points to %s\n" "$arg" "$record" "$ip"
+	done
 else
 	sub_domains=("www" "lb-01" "web-01" "web-02")
 	
