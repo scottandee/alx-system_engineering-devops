@@ -21,7 +21,7 @@ then
 		domain="$arg.$subdomain"
 		ip=$(ip "$domain")
 		record=$(record "$domain")
-		printf "The subdomain %s is a %s that points to %s\n" "$arg" "$record" "$ip"
+		printf "The subdomain %s is a %s record that points to %s\n" "$arg" "$record" "$ip"
 	done
 else
 	sub_domains=("www" "lb-01" "web-01" "web-02")
@@ -31,6 +31,6 @@ else
 		domain="${sub_domains[i]}.$1"
 		ip=$(ip "$domain")
 		record=$(record "$domain")
-		printf "The subdomain %s is a %s that points to %s\n" "${sub_domains[i]}" "$record" "$ip"
+		printf "The subdomain %s is a %s record that points to %s\n" "${sub_domains[i]}" "$record" "$ip"
 	done
 fi
