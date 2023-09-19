@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# This script configures nginx to run as the nginx user, and listen on port 8080
+# This script configures nginx to run as the nginx user,
+# and listen on port 8080
 
 echo "user nginx;" | sudo tee -a /etc/nginx/nginx.conf > /dev/null
 sudo sed -i 's|listen 80 |listen 8080 |' /etc/nginx/sites-available/default
-sudo kill -9 $(ps -e | pgrep apache2 | awk '{print $1}')
+sudo pkill -9 apache2
 sudo service nginx start
