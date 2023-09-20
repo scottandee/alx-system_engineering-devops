@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script executes the whoami command as another user
 
-sudo su  "$1" -c whoami
+sudo -u "$1" whoami
