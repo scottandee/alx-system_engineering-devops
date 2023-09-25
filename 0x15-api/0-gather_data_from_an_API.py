@@ -26,6 +26,6 @@ todos?userId={emp_id}""")
     tots_num_of_tasks = len(all_tasks)
 
     print(f"Employee {emp_name} is done with tasks({num_of_done}\
-/{tots_num_of_tasks}:)")
+/{tots_num_of_tasks}):")
     for task in completed:
         print("\t {}".format(task.get("title")))
