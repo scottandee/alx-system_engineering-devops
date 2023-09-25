@@ -33,8 +33,8 @@ def gather_data(id):
             num_of_done = num_of_done + 1
             completed.append(task)
 
-    print(f"Employee {name} is done with \
-tasks({num_of_done}/{tots_num_of_tasks}):")
+    print(f"Employee {name} is done with tasks({num_of_done}/\
+{tots_num_of_tasks}):")
     for task in completed:
         print("\t {}".format(task.get("title")))
 
