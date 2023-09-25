@@ -13,7 +13,7 @@ if __name__ == "__main__":
     num_of_users = len(users.json())
 
     # Iterate through all users
-    for i in range(1, num_of_users):
+    for i in range(1, num_of_users + 1):
         id = str(i)
 
         user_url = f"https://jsonplaceholder.typicode.com/users/{id}"
