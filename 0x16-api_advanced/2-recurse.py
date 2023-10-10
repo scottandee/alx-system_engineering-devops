@@ -27,8 +27,7 @@ def recurse(subreddit, hot_list=[], after=""):
 
     # Check if the subreddit is a valid one
     if r.status_code != 200:
-        print("None")
-        return
+        return None
 
     # Get the next page identifier and call the recurse function with it
     dic = r.json()
