@@ -2,6 +2,6 @@
 # descriptor limit for the holberton user
 
 exec { 'change-os-configuration-for-holberton-user':
-  command => 'sed "/holberton/d" /etc/security/limits.conf',
+  command => 'sed -i "/holberton/d" /etc/security/limits.conf',
   path    => ['/usr/bin', '/bin']
 }
